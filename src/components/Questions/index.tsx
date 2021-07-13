@@ -9,13 +9,9 @@ type QuestionProps = {
     avatar: string;
   };
   children?: ReactNode;
-}
+};
 
-export function Question({
-  content,
-  author,
-  children,
-}: QuestionProps) {
+export function Questions({ content, author, children }: QuestionProps) {
   return (
     <div className="question">
       <p>{content}</p>
@@ -24,9 +20,7 @@ export function Question({
           <img src={author.avatar} alt={author.name} />
           <span>{author.name}</span>
         </div>
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </footer>
     </div>
   );
