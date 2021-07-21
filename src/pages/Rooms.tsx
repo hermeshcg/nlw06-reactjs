@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
 
 import { Button } from '../components/Button';
-import { Questions } from '../components/Questions';
+import { Question } from '../components/Question';
 import { RoomCode } from '../components/RoomCode';
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
@@ -107,7 +107,7 @@ export function Room() {
         <div className="question-list">
           {questions.map((question) => {
             return (
-              <Questions
+              <Question
                 key={question.id}
                 content={question.content}
                 author={question.author}
@@ -137,7 +137,7 @@ export function Room() {
                     />
                   </svg>
                 </button>
-              </Questions>
+              </Question>
             );
           })}
         </div>
